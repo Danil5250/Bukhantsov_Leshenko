@@ -9,7 +9,7 @@ using std::queue;
 class Orders
 {
 protected:
-	queue orders;
+	queue<Order> orders;
 
 public:
 
