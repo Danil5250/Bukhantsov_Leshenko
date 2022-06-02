@@ -10,6 +10,8 @@ using std::string;
 using std::cout;
 using std::cin;
 using std::endl;
+using std::to_string;
+
 
 class Order
 {
@@ -32,6 +34,6 @@ public:
 	int getId()const&;
 
 
-	virtual string toString()const& = 0;
+	virtual string toString() = 0;
 };
 
