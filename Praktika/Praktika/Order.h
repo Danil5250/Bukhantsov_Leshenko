@@ -6,6 +6,7 @@
 #include "Date.h"
 #include "Time_.h"
 
+using std::to_string;
 using std::string;
 using std::cout;
 using std::cin;
@@ -32,6 +33,6 @@ public:
 	int getId()const&;
 
 
-	virtual string toString()const& = 0;
+	virtual string toString() = 0;
 };
 
