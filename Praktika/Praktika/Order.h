@@ -6,11 +6,12 @@
 #include "Date.h"
 #include "Time_.h"
 
-using std::to_string;
 using std::string;
 using std::cout;
 using std::cin;
 using std::endl;
+using std::to_string;
+
 
 class Order
 {

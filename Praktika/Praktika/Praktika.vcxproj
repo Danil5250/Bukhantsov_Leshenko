@@ -143,6 +143,7 @@
     <ClCompile Include="InsuredOrder.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Order.cpp" />
+    <ClCompile Include="Orders.cpp" />
     <ClCompile Include="OrdinaryOrder.cpp" />
     <ClCompile Include="Time_.cpp" />
   </ItemGroup>
@@ -150,6 +151,7 @@
     <ClInclude Include="Date.h" />
     <ClInclude Include="InsuredOrder.h" />
     <ClInclude Include="Order.h" />
+    <ClInclude Include="Orders.h" />
     <ClInclude Include="OrdinaryOrder.h" />
     <ClInclude Include="Time_.h" />
   </ItemGroup>
