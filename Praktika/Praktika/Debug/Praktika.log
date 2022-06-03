@@ -1,8 +1,12 @@
-﻿  OrdinaryOrder.cpp
-  Time_.cpp
-  Создание кода...
-D:\Даня\C++2021-2022\23\Proekt\Praktika\Praktika\Time_.cpp(106): warning C4715: Time_::valid: значение возвращается не при всех путях выполнения
-D:\Даня\C++2021-2022\23\Proekt\Praktika\Praktika\Time_.cpp(188): warning C4715: Time_::operator>: значение возвращается не при всех путях выполнения
-D:\Даня\C++2021-2022\23\Proekt\Praktika\Praktika\Time_.cpp(262): warning C4172: возвращение адреса локальной или временной переменной : tmp
-D:\Даня\C++2021-2022\23\Proekt\Praktika\Praktika\Time_.cpp(275): warning C4172: возвращение адреса локальной или временной переменной : tmp
-  Praktika.vcxproj -> D:\Даня\C++2021-2022\23\Proekt\Praktika\Debug\Praktika.exe
+﻿  Orders.cpp
+C:\Users\123\Desktop\pr\Praktika\Praktika\Orders.cpp(30,20): warning C4018: <: несоответствие типов со знаком и без знака
+C:\Users\123\Desktop\pr\Praktika\Praktika\Orders.cpp(39,20): warning C4018: <: несоответствие типов со знаком и без знака
+C:\Users\123\Desktop\pr\Praktika\Praktika\Orders.cpp(41,21): warning C4018: <: несоответствие типов со знаком и без знака
+C:\Users\123\Desktop\pr\Praktika\Praktika\Orders.cpp(52,20): warning C4018: <: несоответствие типов со знаком и без знака
+C:\Users\123\Desktop\pr\Praktika\Praktika\Orders.cpp(61,20): warning C4018: <: несоответствие типов со знаком и без знака
+C:\Users\123\Desktop\pr\Praktika\Praktika\Orders.cpp(70,20): warning C4018: <: несоответствие типов со знаком и без знака
+C:\Users\123\Desktop\pr\Praktika\Praktika\Orders.cpp(83,21): warning C4018: <: несоответствие типов со знаком и без знака
+C:\Users\123\Desktop\pr\Praktika\Praktika\Orders.cpp(57): warning C4715: Orders::findByTime: значение возвращается не при всех путях выполнения
+C:\Users\123\Desktop\pr\Praktika\Praktika\Orders.cpp(66): warning C4715: Orders::findByDate: значение возвращается не при всех путях выполнения
+C:\Users\123\Desktop\pr\Praktika\Praktika\Orders.cpp(75): warning C4715: Orders::findById: значение возвращается не при всех путях выполнения
+  Praktika.vcxproj -> C:\Users\123\Desktop\pr\Praktika\Debug\Praktika.exe

@@ -30,8 +30,5 @@ double InsuredOrder::getAmount() const&
 
 string InsuredOrder::toString()
 {
-	return "Id: " + to_string(id) + "\t" + "Date: " + to_string(date.getYear()) + "." + 
-		to_string(date.getMonth()) + "." + to_string(date.getDay()) + "\tTime: " + 
-		time.getFormat() + "   " + to_string(time.getHour()) + ":" + to_string(time.getMinutes()) + 
-		":" + to_string(time.getSeconds()) + "\tCompany: " + company + "\tAmount: " + to_string(amount);
+	return "Id: " + to_string(id) + "\n" + "Date: " + to_string(date.getYear()) + "." + to_string(date.getMonth()) + "." + to_string(date.getDay()) + "\nTime: " + time.getFormat() + "   " + to_string(time.getHour()) + ":" + to_string(time.getMinutes()) + ":" + to_string(time.getSeconds()) + "\nCompany: " + company + "\nAmount: " + to_string(amount);
 }

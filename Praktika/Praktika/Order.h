@@ -35,5 +35,7 @@ public:
 
 
 	virtual string toString() = 0;
+	bool operator<(const Order& obj)const&;
+
 };
 
