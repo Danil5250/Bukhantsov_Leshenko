@@ -32,5 +32,5 @@ int ExpressOrder::getDaysToDeliver() const&
 
 string ExpressOrder::toString()
 {
-    return "Id: " + to_string(id) + "\n" + "Date: " + to_string(date.getYear()) + "." + to_string(date.getMonth()) + "." + to_string(date.getDay()) + "\nTime: " + time.getFormat() + "   " + to_string(time.getHour()) + ":" + to_string(time.getMinutes()) + ":" + to_string(time.getSeconds()) + "\nCourier: " + courier + "\nDays to deliver: " + to_string(daysToDeliver);
+    return "Id: " + to_string(id) + "\nType: ExpressOrder\n" + "Date: " + to_string(date.getYear()) + "." + to_string(date.getMonth()) + "." + to_string(date.getDay()) + "\nTime: " + time.getFormat() + "   " + to_string(time.getHour()) + ":" + to_string(time.getMinutes()) + ":" + to_string(time.getSeconds()) + "\nCourier: " + courier + "\nDays to deliver: " + to_string(daysToDeliver);
 }

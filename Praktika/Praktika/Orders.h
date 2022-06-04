@@ -16,14 +16,15 @@ public:
 	Orders();
 	~Orders();
 
-	void show();
+	void show()const&;
 	void add(Order* obj);
 	void del(int Id);
 	void sortByDateTime();
-	Order* findByTime(Time_ time);
-	Order* findByDate(Date date);
-	Order* findById(int Id);
-	void toText(string puth);
+	Order* findByTime(Time_ time)const&;
+	Order* findByDate(Date date)const&;
+	Order* findById(int Id)const&;
+	void toText(string puth)const&;
 	void inText(string puth);
+	bool isEmpty()const&;
 };
 

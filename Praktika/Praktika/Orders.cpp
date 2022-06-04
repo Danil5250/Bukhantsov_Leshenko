@@ -8,12 +8,11 @@ Orders::~Orders()
 {
 }
 
-void Orders::show()
+void Orders::show() const&
 {
-	
+		cout << "Count: " << orders.size() << endl;
 	for (auto it : orders)
 	{
-		cout << "Count: " << orders.size() << endl;
 		cout << "-----------------------------------\n";
 		cout << it->toString() << endl;
 	}
@@ -47,7 +46,7 @@ void Orders::sortByDateTime()
 	}
 }
 
-Order* Orders::findByTime(Time_ time)
+Order* Orders::findByTime(Time_ time) const&
 {
 	for (int i = 0; i < orders.size(); i++)
 	{
@@ -56,7 +55,7 @@ Order* Orders::findByTime(Time_ time)
 	}
 }
 
-Order* Orders::findByDate(Date date)
+Order* Orders::findByDate(Date date) const&
 {
 	for (int i = 0; i < orders.size(); i++)
 	{
@@ -65,7 +64,7 @@ Order* Orders::findByDate(Date date)
 	}
 }
 
-Order* Orders::findById(int Id)
+Order* Orders::findById(int Id) const&
 {
 	for (int i = 0; i < orders.size(); i++)
 	{
@@ -74,7 +73,7 @@ Order* Orders::findById(int Id)
 	}
 }
 
-void Orders::toText(string puth)
+void Orders::toText(string puth) const&
 {
 	ofstream file;
 	file.open(puth, ios_base::app);
@@ -104,4 +103,9 @@ void Orders::inText(string puth)
 	}
 	else
 		cout << "This file is not open\n"; 
+}
+
+bool Orders::isEmpty() const&
+{
+	return orders.size() == 0;
 }
