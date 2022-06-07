@@ -7,6 +7,7 @@
 #include "Time_.h"
 #include "windows.h"
 #include <conio.h>
+#include "Exception.h"
 using namespace std;
 
 void showMessage(string message) {
@@ -32,6 +33,7 @@ int main()
 
 	Orders orders;
 
+	string path;
 	Date date;
 	Time_ time;
 	int Id;
@@ -50,6 +52,8 @@ int main()
 		cout << "5 - seek by time\n";
 		cout << "6 - seek by Id\n";
 		cout << "7 - del order\n";
+		cout << "8 - in text file\n";
+		cout << "9 - from text file\n";
 		cin >> menu;
 
 		switch (menu)
@@ -57,15 +61,18 @@ int main()
 		default:
 			showMessage("Incorrect choice");
 			break;
+
 		case 1:
+
 			system("cls");
-			
-			cout << "1 - OrdinaryOrder\n"
-				"2 - ExpressOrder\n" <<
-				"3 - InsuredOrder\n";
-			cin >> menu;
-			system("cls");
-			if (menu >= 1 && menu <= 3) {
+			try
+			{
+				cout << "1 - OrdinaryOrder\n"
+					"2 - ExpressOrder\n" <<
+					"3 - InsuredOrder\n";
+				cin >> menu;
+				system("cls");
+				if (menu < 1 || menu > 3) { throw new IncorentChoiceException(); }
 				cout << "Input Id: ";
 				cin >> Id;
 				cout << "Input date: ";
@@ -94,8 +101,9 @@ int main()
 				}
 				showMessage("Success");
 			}
-			else {
-				showMessage("Incorrect choice");
+			catch (Exception* obj)
+			{
+				obj->showMsg();
 			}
 			break;
 		case 2:
@@ -116,8 +124,96 @@ int main()
 			}
 			break;
 		case 4:
+			system("cls");
+			if (orders.isEmpty())
+				showMessage("No orders\n");
+			else {
+				cout << "Input date: "; cin >> date;
+				cout << orders.findByDate(date) << endl;
+				waitSpace();
+			}
+			break;
+
+		case 5:
+			system("cls");
+			try
+			{
+				if (orders.isEmpty())
+					throw new EmptyException();
+
+				cout << "Input time: "; cin >> time;
+				cout << orders.findByTime(time) << endl;
+				waitSpace();
+
+			}
+			catch (Exception* obj)
+			{
+				obj->showMsg();
+			}
+			break;
+
+		case 6:
+			system("cls");
+			try
+			{
+				if (orders.isEmpty())
+					throw new EmptyException();
+
+				cout << "Input Id: "; cin >> Id;
+				cout << orders.findById(Id) << endl;
+				waitSpace();
+
+			}
+
+			catch (Exception* obj)
+			{
+				obj->showMsg();
+			}
+			break;
+
+		case 7:
+			system("cls");
+			try
+			{
+				if (orders.isEmpty())
+					throw new EmptyException();
+
+				cout << "Input Id: "; cin >> Id;
+				if(orders.del(Id))
+					showMessage("Success");
+				else {
+					showMessage("Not find");
+				}
+
+			}
+
+			catch (Exception* obj)
+			{
+				obj->showMsg();
+			}
+			break;
+
+			orders.findByTime(time);
+			break;
+
+		case 8:
+			system("cls");
+			cout << "Input path: "; cin >> path;
+			orders.toText(path);
+			showMessage("Success");
+			break;
+
+		case 9:
+			system("cls");
+			cout << "Input path: "; cin >> path;
+			orders.inText(path);
+			waitSpace();
+			break;
 
 		}
+
+		
+		
 		cin.clear();
 	} while (true);
 

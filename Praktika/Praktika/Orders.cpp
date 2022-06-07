@@ -10,7 +10,7 @@ Orders::~Orders()
 
 void Orders::show() const&
 {
-		cout << "Count: " << orders.size() << endl;
+	cout << "Count: " << orders.size() << endl;
 	for (auto it : orders)
 	{
 		cout << "-----------------------------------\n";
@@ -23,54 +23,60 @@ void Orders::add(Order* obj)
 	orders.push_back(obj);
 }
 
-void Orders::del(int Id)
+bool Orders::del(int Id)
 {
-	
+
 	for (int i = 0; i < orders.size(); i++)
 	{
-		if (orders[i]->getId() == Id)
+		if (orders[i]->getId() == Id) {
 			orders.erase(orders.begin() + i);
+			return true;
+		}
 	}
+	return false;
 }
 
 void Orders::sortByDateTime()
 {
 	for (int i = 0; i < orders.size(); i++)
 	{
-		for (int j = 0; j < orders.size() -i - 1; j++)
+		for (int j = 0; j < orders.size() - i - 1; j++)
 		{
-			if (orders[j]->getDate() > orders[j + 1]->getDate() || (orders[j]->getDate() == orders[j + 1]->getDate() && 
+			if (orders[j]->getDate() > orders[j + 1]->getDate() || (orders[j]->getDate() == orders[j + 1]->getDate() &&
 				orders[j]->getTime() > orders[j + 1]->getTime()))
 				swap(orders[j], orders[j + 1]);
 		}
 	}
 }
 
-Order* Orders::findByTime(Time_ time) const&
+string Orders::findByTime(Time_ time) const&
 {
 	for (int i = 0; i < orders.size(); i++)
 	{
 		if (orders[i]->getTime() == time)
-			return orders[i];
+			return orders[i]->toString();
 	}
+	return "Not find";
 }
 
-Order* Orders::findByDate(Date date) const&
+string Orders::findByDate(Date date) const&
 {
 	for (int i = 0; i < orders.size(); i++)
 	{
 		if (orders[i]->getDate() == date)
-			return orders[i];
+			return orders[i]->toString();
 	}
+	return "Not find";
 }
 
-Order* Orders::findById(int Id) const&
+string Orders::findById(int Id) const&
 {
 	for (int i = 0; i < orders.size(); i++)
 	{
 		if (orders[i]->getId() == Id)
-			return orders[i];
+			return orders[i]->toString();
 	}
+	return "Not find";
 }
 
 void Orders::toText(string puth) const&
@@ -81,7 +87,7 @@ void Orders::toText(string puth) const&
 	{
 		for (int i = 0; i < orders.size(); i++)
 		{
-			file << orders[i]->toString();
+			file << orders[i]->toString()<< "\n\n";
 		}
 		file.close();
 	}
@@ -102,7 +108,7 @@ void Orders::inText(string puth)
 		}
 	}
 	else
-		cout << "This file is not open\n"; 
+		cout << "This file is not open\n";
 }
 
 bool Orders::isEmpty() const&

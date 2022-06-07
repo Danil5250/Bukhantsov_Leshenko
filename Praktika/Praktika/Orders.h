@@ -18,11 +18,11 @@ public:
 
 	void show()const&;
 	void add(Order* obj);
-	void del(int Id);
+	bool del(int Id);
 	void sortByDateTime();
-	Order* findByTime(Time_ time)const&;
-	Order* findByDate(Date date)const&;
-	Order* findById(int Id)const&;
+	string findByTime(Time_ time)const&;
+	string findByDate(Date date)const&;
+	string findById(int Id)const&;
 	void toText(string puth)const&;
 	void inText(string puth);
 	bool isEmpty()const&;

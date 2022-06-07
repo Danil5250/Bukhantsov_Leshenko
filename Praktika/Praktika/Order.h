@@ -26,7 +26,7 @@ public:
 
 	void setDate(Date date);
 	Date getDate()const&;
-	
+
 	void setTime(Time_ time);
 	Time_ getTime()const&;
 
@@ -35,7 +35,6 @@ public:
 
 
 	virtual string toString() = 0;
-	bool operator<(const Order& obj)const&;
 
 };
 

@@ -1,2 +1,15 @@
-﻿  main.cpp
-  Praktika.vcxproj -> C:\Users\123\Desktop\pr\Praktika\Debug\Praktika.exe
+﻿  ExpressOrder.cpp
+  InsuredOrder.cpp
+  Order.cpp
+  Orders.cpp
+C:\Users\123\Desktop\Praktika\Praktika\Orders.cpp(29,20): warning C4018: <: несоответствие типов со знаком и без знака
+C:\Users\123\Desktop\Praktika\Praktika\Orders.cpp(41,20): warning C4018: <: несоответствие типов со знаком и без знака
+C:\Users\123\Desktop\Praktika\Praktika\Orders.cpp(43,21): warning C4018: <: несоответствие типов со знаком и без знака
+C:\Users\123\Desktop\Praktika\Praktika\Orders.cpp(54,20): warning C4018: <: несоответствие типов со знаком и без знака
+C:\Users\123\Desktop\Praktika\Praktika\Orders.cpp(64,20): warning C4018: <: несоответствие типов со знаком и без знака
+C:\Users\123\Desktop\Praktika\Praktika\Orders.cpp(74,20): warning C4018: <: несоответствие типов со знаком и без знака
+C:\Users\123\Desktop\Praktika\Praktika\Orders.cpp(88,21): warning C4018: <: несоответствие типов со знаком и без знака
+  OrdinaryOrder.cpp
+  main.cpp
+  Создание кода...
+  Praktika.vcxproj -> C:\Users\123\Desktop\Praktika\Debug\Praktika.exe
